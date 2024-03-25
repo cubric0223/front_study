@@ -1,10 +1,10 @@
 <div class="frame">
   <div class="center">
     <div class="pagination">
-      <input type="radio" name="page"/>
-      <input type="radio" name="page"/>
-      <input type="radio" name="page"/>
-      <input type="radio" name="page"/>
+      <input type="checkbox" name="page"/>
+      <input type="checkbox" name="page"/>
+      <input type="checkbox" name="page"/>
+      <input type="checkbox" name="page"/>
     </div>
   </div>
 </div>
@@ -15,7 +15,7 @@
 .frame{
   width: 400px;
   height: 400px;
-  background: #1abc9c;
+  background: #1a6ebc;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,7 +39,7 @@
   
 }
 
-input[type=radio]{
+input[type=checkbox]{
   appearance: none;
   outline: none;
 }
@@ -82,10 +82,10 @@ input[type=radio]{
    transition: transform .5s ease-in-out;
 }
 .pagination input:hover {
-   background: #16a085;
+   background: #53aafc;
 }
 .pagination input:checked {
-  color: #1abc9c;
+  color: #1a6ebc;
   background: none;
 }
 .pagination input:checked::after {

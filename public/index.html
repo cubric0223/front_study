@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-Time Text Display with Socket.io</title>
+    <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script>
+      const socket = io('http://127.0.0.1:3000');
+
+      function sendMessage() {
+        const text = document.getElementById('text').value;
+        socket.emit('message', text);
+      }
+
+      // 서버로부터 메시지를 받으면 화면에 표시
+      socket.on('message', function(msg) {
+        const messages = document.getElementById('messages');
+        const messageElement = document.createElement('div');
+        messageElement.textContent = msg;
+        messages.appendChild(messageElement);
+      });
+    </script>
+  </head>
+  <body>
+    <input id="text" type="text">
+    <button onclick="sendMessage()">Send</button>
+    <div id="messages"></div>
+  </body>
+</html>

@@ -5,7 +5,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 800px;
   height: 400px;
   margin-top: -200px;
   margin-left: -200px;
@@ -18,11 +18,16 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
 }
 
 
@@ -32,6 +37,8 @@
 	border: 0px;
 	padding: 20px 40px 20px 40px;
 	box-shadow: 10px 10px 0px purple;
+  font-family: 'Cookie', cursive;
+  margin-right: 10px;
 }
 .btn:hover {
 	transition: 0.5s;
@@ -40,11 +47,19 @@
 	transform: translate(10px, 10px);
 	box-shadow: -10px -10px 0px white;
 }
+/* 마지막 버튼에는 마진X */
+.btn:last-child {
+  margin-right: 0;
+}
 
 </style>
 
 <div class="frame">
     <div class="center">
-          <button class="btn">HOVER ME</button>
+      <button class="btn">LikeLion</button>
+      <button class="btn">Front</button>
+      <button class="btn">part</button>
+      <button class="btn">cheer</button>
+      <button class="btn">up</button>
     </div>
 </div>
