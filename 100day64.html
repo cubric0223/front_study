@@ -24,8 +24,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  /* flex를 이용해서 수평 배치 */
   display: flex;
   justify-content: space-around;
+  /* flex 안에 있는 item을 가운데에 배치하도록 */
   align-items: center;
   height: 100%;
 }
@@ -38,6 +40,7 @@
 	padding: 20px 40px 20px 40px;
 	box-shadow: 10px 10px 0px purple;
   font-family: 'Cookie', cursive;
+  /* 오른쪽에 마진 */
   margin-right: 10px;
 }
 .btn:hover {
@@ -56,6 +59,7 @@
 
 <div class="frame">
     <div class="center">
+      <!-- 버튼 5개 -->
       <button class="btn">LikeLion</button>
       <button class="btn">Front</button>
       <button class="btn">part</button>
