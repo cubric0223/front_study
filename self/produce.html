@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cubric</title>
+    <link rel = "stylesheet" href = "./styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('.nav-button')
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault()
+                const targetId = this.getAttribute('href')
+                const targetSection = document.querySelector(targetId)
+                targetSection.scrollIntoView({ behavior: 'smooth' })
+            })
+        })
+    })
+</script>
+<body>
+<div id="container">
+    <header id = "header">
+        <nav class ="menu">
+            <ul>
+                <li><a href="#one" class="nav-button"><b>Home</b></a></li>
+                <li><a href="#two" class="nav-button"><b>Playlist</b></a></li>
+                <li><a href="#three" class="nav-button"><b>My hobbies</b></a></li>
+                <li><a href="#four" class="nav-button"><b>I want to...</b></a></li>
+            </ul>
+        </nav>
+    </header> 
+  <div class="list">
+      <div id="one">
+        <span class="profile"><img src="./me.jpg" width="500px;" height="667px" alt=""/></span> 
+        <h3><strong>cubric0223@inu.ac.kr</strong> <br>computer engineer & backend dev</h3>
+      </div>
+  </div>
+
+  <div class="list">
+      <div id ="two">
+        <a href="https://www.youtube.com/watch?v=fnlJw9H0xAM" target="_blank">
+          <img class = "me" src ="./war_song.png" alt="" width="890px;" height="500px">
+        </a>
+          <h3 class ="intext">
+            <strong>I like foreign hip-hop, and my playlist is as follows.<br>look at my playlist</strong><br><br>
+            Godzilla (feat. Juice WRLD) - Eminem<br>
+            search - NF<br>
+            hope - NF<br>
+            Still D.R.E. (feat. Snoop Dogg) - Dr.Dre<br>
+            Young, Wild & Free (feat. Bruno Mars) - Wiz Khalifa & Snoop Dogg<br>
+            Without Me -Eminem<br>
+            Rap God - Eminem<br>
+            Clap Back - Ja Rule<br>
+            <br><br>
+            For the my condition</h3>
+      </div>
+  </div>
+  
+  <div class="list">
+      <div id="three">
+          <h1><br><br>My hobbies</h1>
+          <div class = "favorites">
+              <div class="lists">
+                  <img class = "list_img" src="./dog.jpg" alt="">
+                  <p class = "list_text"> walking with my tory</p>
+              </div>
+
+              <div class="lists">
+                  <img class = "list_img" src="./drink.jpg" alt="">
+                  <p class = "list_text"> drink with my friend</p>
+              </div>
+
+              <div class="lists">
+                  <img class = "list_img" src="./ski.jpg" alt="">
+                  <p class = "list_text"> skiing every winter</p>
+              </div>
+
+              <div class="lists">
+                  <img class = "list_img" src="./travel.jpg" alt="">
+                  <p class = "list_text"> traveling</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="list">
+      <div id = "four">
+        <h2 class = "cta">  I want to be good at node js and react. 👍👍👍</h2>
+          <img class = "contact_img" src ="./photo1.png"><br>
+          <a href="https://www.inu.ac.kr/" class="ct">university</a>
+          <a href="https://github.com/cubric0223" class="ct">Github</a>
+      </div>
+  </div>
+<div>
+</body>

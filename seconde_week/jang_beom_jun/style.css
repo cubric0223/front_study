@@ -1,5 +1,5 @@
-.nanum-gothic-regular {
-  font-family: "Nanum Gothic", sans-serif;
+.Comic-Neue-regular {
+  font-family: "Comic Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -17,32 +17,53 @@
 html,
 body {
   height: 100%;
-  font-family: "Nanum Gothic";
+  font-family: "Comic Neue";
   min-width: 320px;
 }
 
 body {
   padding: 30px;
+  background-color: #000;
+  color: #fff;
 }
 
-.title_banner {
+.top-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 150px;
-  background-color: var(--mint);
-  color: white;
-  font-size: 36px;
+  padding: 10px;
+  background-color: #000;
 }
 
-.title {
+.logo {
+  height: 40px;
+}
+
+.search-bar {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
-  color: bar(--coral);
-  border: 5px solid var(--coral);
-  height: 50px;
-  font-size: 24px;
+  margin: 0 20px;
+}
+
+.search-bar input[type="text"] {
+  width: 70%;
+  padding: 5px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+}
+
+.user-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-icon {
+  height: 40px;
+  border-radius: 50%;
 }
 
 main {
@@ -70,7 +91,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   flex: 1;
-  border: 5px solid lightblue;
+  border: 5px solid 000;
   margin-left: 10px;
   align-content: flex-start;
   overflow-y: scroll;
@@ -82,12 +103,12 @@ main {
   width: 220px;
   min-height: 150px;
   padding: 10px;
-  background-color: var(--beige);
+  background-color: 000;
   margin: 10px;
   border-radius: 10px;
 }
 
-.card > img {
+.card > a > img {
   width: 100%;
   height: auto;
   object-fit: contain;

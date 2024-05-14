@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout7</title>
+    <style>
+        * {padding: 0; margin: 0;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        body {background-color: #e3f2fd;}
+        #header{width: 100%; height: 100px; background-color: #b3defe;}
+        
+        #banner{width: 100%; height: 400px; background-color: #7ecbfd;}
+        
+        #content1{overflow: hidden;}
+        #content1 .nav{width: 30%; height: 500px; background-color: #43b5fc; float: left;}
+        #content1 .article_right1{width: 70%; height: 250px; background-color: #00a5fb; float: left;}
+        #content1 .article_right2{width: 70%; height: 250px; background-color: #0096fb; float: left;}
+        
+        #content2{overflow: hidden; }
+        #content2 .article_box1{width: 33.3333%; height: 300px; background-color: #0088ec; float: left;}
+        #content2 .article_box2{width: 33.3333%; height: 300px; background-color: #0076d9; float: left;}
+        #content2 .article_box3{width: 33.3333%; height: 300px; background-color: #0064c6; float: left;}
+        
+        #content3{overflow: hidden; padding: 5%; background-color: #00a6fc; }
+        #content3 .article_square1{width: 23%; height: 200px; margin: 1%; border-radius: 5px; background-color: #0076d9; float: left;}
+        #content3 .article_square2{width: 23%; height: 200px; margin: 1%; border-radius: 5px; background-color: #0076d9; float: left;}
+        #content3 .article_square3{width: 23%; height: 200px; margin: 1%; border-radius: 5px; background-color: #0076d9; float: left;}
+        #content3 .article_square4{width: 23%; height: 200px; margin: 1%; border-radius: 5px; background-color: #0076d9; float: left;}
+       
+        footer{clear: both; width: 100%; height: 100px; background-color: #43b5fc; float: left;}
+        
+        @media (max-width: 1240px) {
+            #wrap{width: 100%;}
+
+            #content2 .article_box1{width: 50%}
+            #content2 .article_box2{width: 50%}
+            #content2 .article_box3{display: none;}
+
+            #content3 .article_square1{width: 31.3333%}
+            #content3 .article_square2{width: 31.3333%}
+            #content3 .article_square3{width: 31.3333%}
+            #content3 .article_square4{display: none;}
+        }
+        
+
+        /*화면 너비 0 ~ 768px*/       
+        @media (max-width:768px) {
+            #wrap{width: 100%;}
+
+            #content2 .article_box2{width: 100%;}
+            #content2 .article_box1{width: 100%;}
+        }
+
+        /*화면 너비 0 ~ 480px*/
+        @media (max-width:480px) {
+            #wrap{width: 100%;}
+            #content2 .article_box1{width: 100%}
+            #content2 .article_box2{width: 100%}
+
+            #content3 .article_square1{width: 98%}
+            #content3 .article_square2{width: 98%}
+            #content3 .article_square3{width: 98%}
+            #content3 .article_square3{width: 98%}
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <section id="banner"></section>
+        <section id="content1">
+            <nav class="nav"></nav>
+            <article class="article_right1"></article>
+            <article class="article_right2"></article>
+        </section>
+        <section id="content2">
+            <article class="article_box1"></article>
+            <article class="article_box2"></article>
+            <article class="article_box3"></article>
+        </section>
+        <section id="content3">
+            <article class="article_square1"></article>
+            <article class="article_square2"></article>
+            <article class="article_square3"></article>
+            <article class="article_square4"></article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+
+</body>
+</html>
