@@ -1,0 +1,112 @@
+.nanum-gothic-regular {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --mint: #9ddfd3;
+  --coral: #fd9795;
+  --beige: #e1cfbd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nanum Gothic";
+  min-width: 320px;
+}
+
+body {
+  padding: 30px;
+}
+
+.title_banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: var(--mint);
+  color: white;
+  font-size: 36px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: bar(--coral);
+  border: 5px solid var(--coral);
+  height: 50px;
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 90%;
+  margin-top: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-shrink: 0;
+  width: 160px;
+  border: 5px solid black;
+  padding: 10px;
+}
+
+.sidebar > span {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  border: 5px solid lightblue;
+  margin-left: 10px;
+  align-content: flex-start;
+  overflow-y: scroll;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 220px;
+  min-height: 150px;
+  padding: 10px;
+  background-color: var(--beige);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card > span {
+  text-align: center;
+  word-break: break-all;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    background: var(--coral);
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    background: var(--mint);
+  }
+}

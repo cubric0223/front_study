@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Cafe24Ohsquareair";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/Cafe24Ohsquareair.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --mint: #9ddfd3;
+  --coral: #fd9795;
+  --beige: #e1cfbd;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Cafe24Ohsquareair";
+  min-width: 320px;
+}
+
+body {
+  padding: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  justify-content: center; /* 자식 요소들을 가로축 중앙에 배치 */
+  align-items: center; /* 자식 요소들을 세로축 중앙에 배치 */
+  color: var(--coral);
+  border: 5px solid var(--coral); /* 테두리를 5픽셀 너비의 실선으로 설정하고, 색상은 CSS 변수 --coral */
+  height: 50px;
+  font-size: 1.5rem; /* 글자 크기를 기본 글자 크기의 1.5배로 설정 */
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap; /* 자식 요소들을 행 방향으로 배치하며, 줄바꿈을 하지 않음 */
+  height: calc(
+    100% - 60px
+  ); /* 높이를 부모 요소의 100%에서 60픽셀을 뺀 값으로 설정 */
+  margin-top: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-flow: column; /* 자식 요소들을 열 방향으로 배치 */
+  width: 120px;
+  flex-shrink: 0; /* flex 축소가 발생하지 않도록 함*/
+  border: 5px solid black; /* 테두리를 5픽셀 너비의 검은색 실선으로 설정 */
+  padding: 10px;
+}
+
+.sidebar > span {
+  /*.sidebar 클래스를 가진 요소의 직접 자식이면서 span 태그인 모든 요소들에 적용*/
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap; /* 자식 요소들을 행 방향으로 배치하며, 필요시 줄바꿈을 하여 다음 행에 배치합니다. */
+  flex: 1; /*사용 가능한 공간을 균등하게 채우기*/
+  border: 5px solid lightblue;
+  margin-left: 10px;
+  align-content: flex-start; /*컨테이너의 시작 부분에 맞춰 정렬*/
+  overflow-y: scroll; /* 세로 방향으로 내용이 넘칠 경우 스크롤바를 표시 */
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  width: 200px;
+  min-height: 150px;
+  padding: 10px;
+  background-color: var(--beige);
+  margin: 10px;
+  border-radius: 10px; /* 모서리를 둥글게*/
+}
+
+.card > a > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card > span {
+  text-align: center;
+}
